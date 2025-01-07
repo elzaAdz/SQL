@@ -200,7 +200,7 @@ SET BonusAmount = CASE
     ELSE 0 
 END;
 
---OvertimeAmount  should be the difference between the NetAmount and RegularWorkAmount for every Even month (February,April,…)
+--OvertimeAmount  should be the difference between the NetAmount and RegularWorkAmount for every Even month (February,April,â€¦)
 UPDATE dbo.Salary
 SET OvertimeAmount = CASE 
      WHEN [Month] % 2 = 0 THEN NetAmount - RegularWorkAmount 
